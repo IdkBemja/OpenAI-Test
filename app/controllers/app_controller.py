@@ -17,12 +17,6 @@ def ask():
     behavior = data['behavior']
     question = data['question']
 
-    print(f"Received behavior: {behavior}")
-    print(f"Received question: {question}")
-
-    # Aquí deberías llamar a tu función de IA para obtener la respuesta
-    # Por ejemplo: response = get_ai_response(behavior, question)
     response = get_ai_response(behavior, question)
-    print(f"AI response: {response}")
 
     return jsonify({'response': response})

@@ -28,4 +28,4 @@ def get_ai_response(behavior: str, question: str) -> str:
     return response.choices[0].message.content.strip()
 
 # Ejemplo de uso:
-# respuesta = get_ai_response("Eres un asistente útil.", "¿Cuál es la capital de
+# respuesta = get_ai_response("Eres un experto en Python.", "¿Cómo puedo crear una función?")

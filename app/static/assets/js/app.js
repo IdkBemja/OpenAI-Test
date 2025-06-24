@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // Inserta dinámicamente el form de comportamiento al cargar
     const behaviorForm = `
         <form action="" method="post" id="form-prompt" class="form-prompt">
             <textarea name="prompt" rows="4" cols="50" placeholder="Escribe como debería actuar la IA" class="textarea-form"></textarea>
@@ -31,7 +30,6 @@ $(document).ready(function () {
         $('#form-question').data('behavior', behavior);
     });
 
-    // Delegado: Maneja el botón de editar comportamiento
     $(document).on('click', '#btn-edit-behavior', function () {
         const currentBehavior = $('#form-question').data('behavior') || "";
 
