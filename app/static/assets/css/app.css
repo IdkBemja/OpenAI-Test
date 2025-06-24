@@ -130,3 +130,38 @@ main {
     cursor: not-allowed;
 }
 
+/* Vista móvil: reduce todo un 20% */
+@media (max-width: 600px) {
+    .main-container {
+        transform: scale(0.8);
+    }
+
+    .textarea-form,
+    #ia-response-text {
+        width: 440px;
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .form-prompt {
+        height: 160px;
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .btn-form {
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 13px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    #ia-response-text {
+        margin-top: 16px;
+        border-radius: 4px;
+    }
+}
+
