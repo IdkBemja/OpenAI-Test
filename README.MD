@@ -2,7 +2,22 @@
 
 ## ¿Qué hace la aplicación?
 
-Esta aplicación web permite interactuar con un modelo de IA (usando la API de GitHub Models compatible con OpenAI) a través de una interfaz moderna construida con Flask y jQuery. El usuario primero define el "comportamiento" (prompt de sistema) y luego realiza una pregunta; la IA responde según ese comportamiento. Todo el flujo es dinámico y sin recargar la página.
+Esta aplicación web permite interactuar con un modelo de IA ChatGPT o4-mini (usando la API de GitHub Models compatible con OpenAI) a través de una interfaz moderna construida con Flask y jQuery. El usuario primero define el "comportamiento" (prompt de sistema) y luego realiza una pregunta; la IA responde según ese comportamiento. Todo el flujo es dinámico y sin recargar la página.
+
+## ¿Cómo Funciona?
+
+Un ejemplo de como debería gestionarse eso debería ser de la siguiente manera:
+   
+- **Behavior** (Comportamiento o rol dentro del sistema + Manejo de errores para evitar preguntas fuera del rol.):
+   ```
+   Eres un profesor de matemáticas y un estudiante te va a hacer preguntas de operaciones matemáticas, para llevar a cabo este procedimiento deberás no darle la respuesta directamente, al contrario, deberás darle el paso a paso para llegar a la solución con la respuesta. Si el usuario ingresa una pregunta que no sea de aritmética simple deberás responder con "Lo siento, solo soy un profesor de matemáticas, no tengo conocimiento en x área" siendo x área el campo que se está haciendo la pregunta.
+   ```
+
+- **Question** (La pregunta que se le va a hacer a la IA):
+   ```
+   ¿Cuanto es 5 x 5 / 2? Respuesta esperada: procedimiento + resultado
+   ¿Qué es C++? Respuesta esperada: Lo siento, solo soy un profesor de matemáticas, no tengo conocimiento en programación.
+   ```
 
 ---
 
