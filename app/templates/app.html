@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/app.css') }}">
+    <title>Test OpenAI App</title>
+</head>
+<body>
+    <header>
+        <h1>Test OpenAI App</h1>
+        <p>Esta aplicación es de prueba para mostrar que puede hacerse con Python Flask + OpenAI API</p>
+        <p>En este caso la aplicación está enfocada en enviar un prompt o como debe actuar la IA + La pregunta.</p>
+    </header>
+    <main class="main-container">
+        <div class="prompts-div">
+            <h1>Prompt Prueba</h1>
+        </div>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+</html>
